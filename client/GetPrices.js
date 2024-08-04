@@ -1,3 +1,4 @@
+require("dotenv").config();
 const ethers = require("ethers");
 
 const {
@@ -11,7 +12,7 @@ const { erc20ABI, factoryABI, pairABI, routerABI } = require("./AbiList");
 
 // Standard Provider
 const provider = new ethers.providers.JsonRpcProvider(
-  "https://mainnet.infura.io/v3/a00aaec7f9e14937b47b04db63def3f1" // Ethereum INFURA API Endpoint.
+  process.env.INFURA_API_ENDPOINT // Ethereum INFURA API Endpoint.
 );
 
 // Connect to Factory
