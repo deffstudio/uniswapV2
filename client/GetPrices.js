@@ -11,7 +11,7 @@ const { erc20ABI, factoryABI, pairABI, routerABI } = require("./AbiList");
 
 // Standard Provider
 const provider = new ethers.providers.JsonRpcProvider(
-  "https://bsc-mainnet.infura.io/v3/a00aaec7f9e14937b47b04db63def3f1"
+  "https://mainnet.infura.io/v3/a00aaec7f9e14937b47b04db63def3f1" // Ethereum INFURA API Endpoint.
 );
 
 // Connect to Factory
@@ -54,7 +54,7 @@ const getPrices = async (amountInHuman) => {
   console.log("Amounts Out: ", amountsOut);
 };
 
-const amountInHuman = "500";
+const amountInHuman = "1";
 getPrices(amountInHuman);
 
 //console.log(contractRouter);
